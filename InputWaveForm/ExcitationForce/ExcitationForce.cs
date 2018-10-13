@@ -19,9 +19,10 @@ namespace ExcitationForce
 
         public ExcitationForce(double F0, Frequency w, Time time)
         {
-            F0 = _force;
-            w = Frequency;
-            time = Time;
+            Force=F0;
+            Frequency = w;
+            Time = time;
+           
 
             NeedToCalculate = true;
         }
@@ -97,6 +98,8 @@ namespace ExcitationForce
                 ForceOsciallations.Clear();
 
                 foreach (double item in Frequency.CosineOscillation)
+
+
                 {
                     double force = Force * item;
                     double F = Math.Round(force, 6);
@@ -118,8 +121,5 @@ namespace ExcitationForce
 
             return builder.ToString();
         }
-
-
-
     }
 }
