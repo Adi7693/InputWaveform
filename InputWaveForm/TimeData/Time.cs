@@ -17,9 +17,6 @@ namespace TimeData
             NeedsToRecalculate = true;
         }
 
-
-        
-
         private bool NeedsToRecalculate;
 
         private double _startTime;

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{225516CB-375D-4533-B491-69534627C1F2}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>FrequencyData</RootNamespace>
-    <AssemblyName>FrequencyData</AssemblyName>
+    <ProjectGuid>{BE21159E-22F2-419F-9815-80DCEA16FCA4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ExcitationForce</RootNamespace>
+    <AssemblyName>ExcitationForce</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,13 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frequency.cs" />
+    <Compile Include="ExcitationForce.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FrequencyData\FrequencyData.csproj">
+      <Project>{225516cb-375d-4533-b491-69534627c1f2}</Project>
+      <Name>FrequencyData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TimeData\TimeData.csproj">
       <Project>{9d713e16-9aab-4bbb-ab07-0858f55af156}</Project>
       <Name>TimeData</Name>

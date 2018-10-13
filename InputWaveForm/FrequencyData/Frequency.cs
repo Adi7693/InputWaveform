@@ -8,7 +8,7 @@ using TimeData;
 
 namespace FrequencyData
 {
-    class Frequency
+    public class Frequency
     {
 
         private bool NeedToCalculate;
