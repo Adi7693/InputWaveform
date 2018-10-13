@@ -1,0 +1,37 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+            //Initialising t0, tn, dt
+
+            double t0 = 0.0;                
+            double tn = 0.0;
+            double dt = 0.0;
+
+            try
+            {
+                Console.WriteLine("Enter Start Time");
+                t0 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("End Time");
+                tn = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Enter Time Step");
+                dt = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                //if (dt > 0.05)
+                //    Console.WriteLine("Error: Enter Time Step Less Than 0.05.");
+            }
+
+            Time time = new Time(t0, tn, dt);
+
+            time.Calculate();
+
+            Console.WriteLine(time);
+
+            Console.ReadLine();
+        }
+    }
+}
