@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using TimeData;
 using FrequencyData;
+using ExcitationForce;
+using SaveToCSV;
 
 
-namespace ExcitationForce
+namespace InputWaveform
 {
     class Program
     {
@@ -37,11 +39,7 @@ namespace ExcitationForce
                 f0 = Convert.ToDouble(Console.ReadLine());
 
             }
-            catch
-            {
-
-
-            }
+            catch { }
 
             Time time = new Time(t0, tn, dt);
             time.Calculate();
@@ -49,14 +47,16 @@ namespace ExcitationForce
             Frequency frequency = new Frequency(f, time);
             frequency.CosineCalculate();
 
-            ExcitationForce Force = new ExcitationForce(f0, frequency, time);
-            Force.ForceCalculate();
+            InputForce force = new InputForce(f0, frequency, time);
+            force.ForceCalculate();
 
-            Console.WriteLine(Force);
+            //Console.WriteLine(Force);
+
+            ConvertToCSV CSV = new ConvertToCSV(time, force);
+            CSV.Convert();
+            CSV.Print();
 
             Console.ReadLine();
-
-
         }
     }
 }

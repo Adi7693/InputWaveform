@@ -8,7 +8,7 @@ using FrequencyData;
 
 namespace ExcitationForce
 {
-    public class ExcitationForce
+    public class InputForce
     {
         private double _force;
         private Time _time;
@@ -17,12 +17,12 @@ namespace ExcitationForce
         public bool NeedToCalculate;
 
 
-        public ExcitationForce(double F0, Frequency w, Time time)
+        public InputForce(double F0, Frequency w, Time time)
         {
-            Force=F0;
+            Force = F0;
             Frequency = w;
             Time = time;
-           
+
 
             NeedToCalculate = true;
         }
@@ -116,7 +116,10 @@ namespace ExcitationForce
 
             for (int i = 0; i < Time.TimeIntervals.Count; i++)
             {
-                builder.AppendLine("Time: " + Time.TimeIntervals[i] + "\tForce Osicallation: " + ForceOsciallations[i]);
+                //builder.AppendLine(Time.TimeIntervals[i].ToString());
+                //builder.AppendLine(ForceOsciallations[i].ToString());
+                builder.AppendLine(Time.TimeIntervals[i] + "," + ForceOsciallations[i]);
+
             }
 
             return builder.ToString();

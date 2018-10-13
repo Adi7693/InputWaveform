@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE21159E-22F2-419F-9815-80DCEA16FCA4}</ProjectGuid>
+    <ProjectGuid>{6D415487-5120-4FD7-8ABD-968EE567AC22}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ExcitationForce</RootNamespace>
-    <AssemblyName>ExcitationForce</AssemblyName>
+    <RootNamespace>SaveToCSV</RootNamespace>
+    <AssemblyName>SaveToCSV</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,13 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcitationForce.cs" />
+    <Compile Include="ConvertToCSV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExcitationForce\ExcitationForce.csproj">
+      <Project>{be21159e-22f2-419f-9815-80dcea16fca4}</Project>
+      <Name>ExcitationForce</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FrequencyData\FrequencyData.csproj">
       <Project>{225516cb-375d-4533-b491-69534627c1f2}</Project>
       <Name>FrequencyData</Name>

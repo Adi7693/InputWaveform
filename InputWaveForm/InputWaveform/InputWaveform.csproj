@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE21159E-22F2-419F-9815-80DCEA16FCA4}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>ExcitationForce</RootNamespace>
-    <AssemblyName>ExcitationForce</AssemblyName>
+    <ProjectGuid>{3A7C0E92-72EC-4639-B93E-ACE6FA8EDF20}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>InputWaveform</RootNamespace>
+    <AssemblyName>InputWaveform</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,16 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcitationForce.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExcitationForce\ExcitationForce.csproj">
+      <Project>{be21159e-22f2-419f-9815-80dcea16fca4}</Project>
+      <Name>ExcitationForce</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FrequencyData\FrequencyData.csproj">
       <Project>{225516cb-375d-4533-b491-69534627c1f2}</Project>
       <Name>FrequencyData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaveToCSV\SaveToCSV.csproj">
+      <Project>{6d415487-5120-4fd7-8abd-968ee567ac22}</Project>
+      <Name>SaveToCSV</Name>
     </ProjectReference>
     <ProjectReference Include="..\TimeData\TimeData.csproj">
       <Project>{9d713e16-9aab-4bbb-ab07-0858f55af156}</Project>

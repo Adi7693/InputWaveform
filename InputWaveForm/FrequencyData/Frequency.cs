@@ -23,7 +23,7 @@ namespace FrequencyData
 
         }
 
-        private Time _time = null;
+        private Time _time;
 
         public Time Time
         {
@@ -83,6 +83,8 @@ namespace FrequencyData
                     CosineOscillation.Add(w);
                 }
 
+                NeedToCalculate = false;
+
             }
         }
 
@@ -101,8 +103,5 @@ namespace FrequencyData
             }
             return builder.ToString();
         }
-
-
-
     }
 }
