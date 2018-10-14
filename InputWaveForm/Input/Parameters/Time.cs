@@ -6,6 +6,15 @@ namespace Input
 {
     public class Time
     {
+        public Time()
+        {
+            StartTime = 0.0;
+            EndTime = 0.0;
+            TimeStep = 0.0;
+
+            NeedsToRecalculate = false;
+        }
+
         public Time(double startTime, double endTime, double step)
         {
             StartTime = startTime;

@@ -4,18 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using MathNet.Numerics;
 
 namespace Input
 {
     public class VehicleData
     {
-
         private double _vehicleMass;
         private double _springStiffness;
         private double _dampingCoefficient;
 
+        public bool NeedsToRecalculate;
 
-        public bool NeedToCalculate;
+        public VehicleData()
+        {
+            VehicleMass = 0.0;
+            SpringStiffness = 0.0;
+            DampingCoefficient = 0.0;
+
+            NeedsToRecalculate = false;
+        }
+
+
+        public bool NeedToRecalculate;
 
         public VehicleData(double vehicleMass, double springStiffness, double dampingCoefficient, InputForce force)
         {
@@ -24,7 +35,7 @@ namespace Input
             DampingCoefficient = dampingCoefficient;
             Force = force;
 
-            NeedToCalculate = true;
+            NeedToRecalculate = true;
         }
 
         // In Kg
@@ -42,7 +53,7 @@ namespace Input
                     if (value > 0)
                     {
                         _vehicleMass = value;
-                        NeedToCalculate = true;
+                        NeedToRecalculate = true;
                     }
                 }
             }
@@ -61,7 +72,7 @@ namespace Input
                 if (!value.Equals(_springStiffness))
                 {
                     _springStiffness = value;
-                    NeedToCalculate = true;
+                    NeedToRecalculate = true;
                 }
                 
             }
@@ -80,7 +91,7 @@ namespace Input
                 if(!value.Equals(_dampingCoefficient))
                 {
                     _dampingCoefficient = value;
-                    NeedToCalculate = true;
+                    NeedToRecalculate = true;
                 }
             }
 
@@ -171,7 +182,7 @@ namespace Input
                 if(!value.Equals(_force))
                 {
                     _force = value;
-                    NeedToCalculate = true;
+                    NeedToRecalculate = true;
                 }
             }
         }
@@ -192,7 +203,7 @@ namespace Input
 
         public void CalculateDisplacement()
         {
-            if (NeedToCalculate)
+            if (NeedToRecalculate)
             {
                 if (Displacement == null)
                 {
@@ -206,6 +217,7 @@ namespace Input
                     double xOfTime = 1000.0*StaticDisplacement * TransferFunction * Math.Cos((Force.Frequency.ExcitationFrequencyRad * item)+Phy);
                     Displacement.Add(xOfTime);
                 }
+                NeedToRecalculate = false;
             }
         }
 

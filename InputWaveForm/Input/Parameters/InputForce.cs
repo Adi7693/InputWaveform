@@ -84,6 +84,7 @@ namespace Input
 
                     ForceOscillations.Add(F);
                 }
+                NeedToCalculate = false;
             }
         }
 
