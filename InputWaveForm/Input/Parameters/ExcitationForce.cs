@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TimeData;
-using FrequencyData;
 
-namespace ExcitationForce
+namespace Input
 {
     public class InputForce
     {
@@ -83,19 +81,19 @@ namespace ExcitationForce
 
 
 
-        public List<double> ForceOsciallations { get; private set; }
+        public List<double> ForceOscillations { get; private set; }
 
         public void ForceCalculate()
         {
             if (NeedToCalculate)
             {
-                if (ForceOsciallations == null)
+                if (ForceOscillations == null)
                 {
-                    ForceOsciallations = new List<double>();
+                    ForceOscillations = new List<double>();
                 }
 
 
-                ForceOsciallations.Clear();
+                ForceOscillations.Clear();
 
                 foreach (double item in Frequency.CosineOscillation)
 
@@ -104,7 +102,7 @@ namespace ExcitationForce
                     double force = Force * item;
                     double F = Math.Round(force, 6);
 
-                    ForceOsciallations.Add(F);
+                    ForceOscillations.Add(F);
                 }
             }
         }
@@ -118,7 +116,7 @@ namespace ExcitationForce
             {
                 //builder.AppendLine(Time.TimeIntervals[i].ToString());
                 //builder.AppendLine(ForceOsciallations[i].ToString());
-                builder.AppendLine(Time.TimeIntervals[i] + "," + ForceOsciallations[i]);
+                builder.AppendLine(Time.TimeIntervals[i] + "," + ForceOscillations[i]);
 
             }
 

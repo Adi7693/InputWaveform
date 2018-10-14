@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using TimeData;
-
-namespace FrequencyData
+namespace Input
 {
     public class Frequency
     {

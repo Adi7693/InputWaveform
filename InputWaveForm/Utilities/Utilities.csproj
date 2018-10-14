@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D713E16-9AAB-4BBB-AB07-0858F55AF156}</ProjectGuid>
+    <ProjectGuid>{6D415487-5120-4FD7-8ABD-968EE567AC22}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>TimeData</RootNamespace>
-    <AssemblyName>TimeData</AssemblyName>
+    <RootNamespace>Utilities</RootNamespace>
+    <AssemblyName>Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SaveToCSV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Time.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Input\Input.csproj">
+      <Project>{3a7c0e92-72ec-4639-b93e-ace6fa8edf20}</Project>
+      <Name>Input</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

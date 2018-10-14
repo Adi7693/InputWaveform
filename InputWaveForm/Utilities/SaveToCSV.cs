@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Text;
-using System.Threading.Tasks;
-using TimeData;
-using ExcitationForce;
-
-namespace SaveToCSV
+using Input;
+namespace Utilities
 {
-    public class ConvertToCSV
+    public class SaveToCSV
     {
         private Time _time;
         private InputForce _force;
 
         public bool NeedToConvert;
 
-        public ConvertToCSV(Time time, InputForce force)
+        public SaveToCSV(Time time, InputForce force)
         {
             Time = time;
             Force = force;
@@ -57,7 +54,7 @@ namespace SaveToCSV
             }
         }
 
-        public List<string> CSV { get; private set; }
+        public StringBuilder CSV { get; private set; }
 
         public void Convert()
         {
@@ -65,7 +62,7 @@ namespace SaveToCSV
             {
                 if (CSV == null)
                 {
-                    CSV = new List<string>();
+                    CSV = new StringBuilder();
                 }
             }
 
@@ -73,20 +70,20 @@ namespace SaveToCSV
 
             for (int i = 0; i < Time.TimeIntervals.Count; i++)
             {
-                string time = Time.TimeIntervals[i].ToString();
-                string force = Force.ForceOsciallations[i].ToString();
-
-                string CSVData = time + " , " + force;
-                CSV.Add(CSVData);
+                CSV.AppendLine(Time.TimeIntervals[i].ToString()+" , "+ Force.ForceOscillations[i].ToString());
             }
         }
 
         public void Print()
         {
-            foreach (object item in CSV)
-            {
-                Console.WriteLine(item);
-            }
+            Console.WriteLine(CSV);
         }
+
+        //public void SaveAsCSV()
+        //{
+        //    File.WriteAllLines(@"C:\Users\Aditya\Documents\VS\GitHub\InputWaveForm\InputWaveform1.csv", CSV);
+
+            
+        //}
     }
 }

@@ -3,15 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrequencyData", "FrequencyData\FrequencyData.csproj", "{225516CB-375D-4533-B491-69534627C1F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Input", "Input\Input.csproj", "{3A7C0E92-72EC-4639-B93E-ACE6FA8EDF20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeData", "TimeData\TimeData.csproj", "{9D713E16-9AAB-4BBB-AB07-0858F55AF156}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{6D415487-5120-4FD7-8ABD-968EE567AC22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcitationForce", "ExcitationForce\ExcitationForce.csproj", "{BE21159E-22F2-419F-9815-80DCEA16FCA4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputWaveform", "InputWaveform\InputWaveform.csproj", "{3A7C0E92-72EC-4639-B93E-ACE6FA8EDF20}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveToCSV", "SaveToCSV\SaveToCSV.csproj", "{6D415487-5120-4FD7-8ABD-968EE567AC22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Output", "Output\Output.csproj", "{8BCB806D-CA45-42CB-9AC2-08551F913380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,18 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{225516CB-375D-4533-B491-69534627C1F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{225516CB-375D-4533-B491-69534627C1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{225516CB-375D-4533-B491-69534627C1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{225516CB-375D-4533-B491-69534627C1F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D713E16-9AAB-4BBB-AB07-0858F55AF156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D713E16-9AAB-4BBB-AB07-0858F55AF156}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D713E16-9AAB-4BBB-AB07-0858F55AF156}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D713E16-9AAB-4BBB-AB07-0858F55AF156}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE21159E-22F2-419F-9815-80DCEA16FCA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE21159E-22F2-419F-9815-80DCEA16FCA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE21159E-22F2-419F-9815-80DCEA16FCA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE21159E-22F2-419F-9815-80DCEA16FCA4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A7C0E92-72EC-4639-B93E-ACE6FA8EDF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A7C0E92-72EC-4639-B93E-ACE6FA8EDF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A7C0E92-72EC-4639-B93E-ACE6FA8EDF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +23,10 @@ Global
 		{6D415487-5120-4FD7-8ABD-968EE567AC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D415487-5120-4FD7-8ABD-968EE567AC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D415487-5120-4FD7-8ABD-968EE567AC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BCB806D-CA45-42CB-9AC2-08551F913380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BCB806D-CA45-42CB-9AC2-08551F913380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BCB806D-CA45-42CB-9AC2-08551F913380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BCB806D-CA45-42CB-9AC2-08551F913380}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

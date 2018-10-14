@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TimeData;
-using FrequencyData;
-using ExcitationForce;
-using SaveToCSV;
+using Input;
+using Utilities;
 
-
-namespace InputWaveform
+namespace Output
 {
     class Program
     {
@@ -52,9 +49,11 @@ namespace InputWaveform
 
             //Console.WriteLine(Force);
 
-            ConvertToCSV CSV = new ConvertToCSV(time, force);
+            SaveToCSV CSV = new SaveToCSV(time, force);
             CSV.Convert();
             CSV.Print();
+            //CSV.SaveAsCSV();
+
 
             Console.ReadLine();
         }
