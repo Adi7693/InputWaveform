@@ -11,11 +11,12 @@ namespace Input
 
         private bool NeedToCalculate;
         private double _excitationFrequency;
+        private double _excitationFrequencyHz;
 
 
         public Frequency(double excitationFrequency, Time time)
         {
-            ExcitationFrequency = excitationFrequency;
+            ExcitationFrequencyHz = excitationFrequency;
             Time = time;
             NeedToCalculate = true;
 
@@ -41,6 +42,25 @@ namespace Input
             }
         }
 
+        // In Hz
+        public double ExcitationFrequencyHz
+        {
+            get
+            {
+                return _excitationFrequencyHz;
+            }
+
+            set
+            {
+                if (!value.Equals(_excitationFrequencyHz))
+                {
+                    _excitationFrequencyHz = value;
+                    NeedToCalculate = true;
+                }
+            }
+        }
+
+        // In rad/s
         public double ExcitationFrequency
         {
             get
@@ -50,10 +70,10 @@ namespace Input
 
             set
             {
-                if (!value.Equals(_excitationFrequency))
+                if(NeedToCalculate)
                 {
-                    _excitationFrequency = value;
-                    NeedToCalculate = true;
+                    double w = 2 * Math.PI * ExcitationFrequency;
+                    _excitationFrequency = w;
                 }
             }
         }
@@ -75,7 +95,7 @@ namespace Input
                 //Access Time Data from TimeData Project
                 foreach (double item in Time.TimeIntervals)
                 {
-                    double frequency = Math.Cos(2 * Math.PI * ExcitationFrequency * item);
+                    double frequency = Math.Cos(2 * Math.PI * ExcitationFrequencyHz * item);
                     double w = Math.Round(frequency, 6);
 
                     CosineOscillation.Add(w);

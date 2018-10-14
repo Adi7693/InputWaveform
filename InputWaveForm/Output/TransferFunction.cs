@@ -9,5 +9,8 @@ namespace Output
 {
     class TransferFunction
     {
+        
+
+
     }
 }

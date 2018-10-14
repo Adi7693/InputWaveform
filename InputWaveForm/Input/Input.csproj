@@ -49,6 +49,7 @@
     <Compile Include="Parameters\ExcitationForce.cs" />
     <Compile Include="Parameters\Frequency.cs" />
     <Compile Include="Parameters\Time.cs" />
+    <Compile Include="Parameters\VehicleData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
