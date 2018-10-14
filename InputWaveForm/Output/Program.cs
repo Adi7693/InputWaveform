@@ -18,6 +18,8 @@ namespace Output
             double f = 0.0;
             double f0 = 0.0;
             double m = 0.0;
+            double k = 0.0;
+            double c = 0.0;
 
             try
             {
@@ -39,6 +41,12 @@ namespace Output
                 Console.WriteLine("Enter Vehicle Mass.");
                 m = Convert.ToDouble(Console.ReadLine());
 
+                Console.WriteLine("Enter Spring Stiffness in N/m.");
+                k = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Enter Damping Coefficient in N/(m/s).");
+                c = Convert.ToDouble(Console.ReadLine());
+
 
                 while(m <= 0.0)
                 {
@@ -53,18 +61,14 @@ namespace Output
 
             Frequency frequency = new Frequency(f, time);
             frequency.CosineCalculate();
-            Console.WriteLine(frequency);
+
 
             InputForce force = new InputForce(f0, frequency, time);
             force.ForceCalculate();
 
-            //Console.WriteLine(Force);
-
-            //SaveToCSV CSV = new SaveToCSV(time, force);
-            //CSV.Convert();
-            //CSV.Print();
-            ////CSV.SaveAsCSV();
-
+            VehicleData vehicle = new VehicleData(m, k, c, force);
+            vehicle.CalculateDisplacement();
+            vehicle.SaveAsCSV(@"C:\Users\Aditya\Documents\VS\GitHub\InputWaveForm\OutputFile.csv");
 
             Console.ReadLine();
         }

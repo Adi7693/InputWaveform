@@ -61,21 +61,13 @@ namespace Input
         }
 
         // In rad/s
-        public double ExcitationFrequency
+        public double ExcitationFrequencyRad
         {
             get
             {
-                return _excitationFrequency;
+                return 2 * Math.PI * ExcitationFrequencyHz;
             }
-
-            set
-            {
-                if(NeedToCalculate)
-                {
-                    double w = 2 * Math.PI * ExcitationFrequency;
-                    _excitationFrequency = w;
-                }
-            }
+                    
         }
 
         public List<double> CosineOscillation { get; private set; }

@@ -9,7 +9,6 @@ namespace Input
     public class InputForce
     {
         private double _force;
-        private Time _time;
         private Frequency _frequency;
 
         public bool NeedToCalculate;
@@ -19,8 +18,6 @@ namespace Input
         {
             Force = F0;
             Frequency = w;
-            Time = time;
-
 
             NeedToCalculate = true;
         }
@@ -43,29 +40,12 @@ namespace Input
             }
         }
 
-        public Time Time
-        {
-            get
-            {
-                return _time;
-            }
-
-            set
-            {
-                if (!value.Equals(_time))
-                {
-                    _time = value;
-                    NeedToCalculate = true;
-                }
-            }
-        }
 
         public Frequency Frequency
         {
             get
             {
                 return _frequency;
-
             }
 
             set
@@ -112,11 +92,11 @@ namespace Input
         {
             StringBuilder builder = new StringBuilder();
 
-            for (int i = 0; i < Time.TimeIntervals.Count; i++)
+            for (int i = 0; i < Frequency.Time.TimeIntervals.Count; i++)
             {
                 //builder.AppendLine(Time.TimeIntervals[i].ToString());
                 //builder.AppendLine(ForceOsciallations[i].ToString());
-                builder.AppendLine(Time.TimeIntervals[i] + "," + ForceOscillations[i]);
+                builder.AppendLine(Frequency.Time.TimeIntervals[i] + "," + ForceOscillations[i]);
 
             }
 

@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Parameters\ExcitationForce.cs" />
+    <Compile Include="Parameters\InputForce.cs" />
     <Compile Include="Parameters\Frequency.cs" />
     <Compile Include="Parameters\Time.cs" />
     <Compile Include="Parameters\VehicleData.cs" />
