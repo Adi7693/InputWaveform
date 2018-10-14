@@ -39,7 +39,7 @@ namespace Input
             {
                 if(!value.Equals(_vehicleMass))
                 {
-                    if(VehicleMass > 0)
+                    if (value > 0)
                     {
                         _vehicleMass = value;
                         NeedToCalculate = true;
@@ -203,7 +203,7 @@ namespace Input
 
                 foreach (double item in Force.Frequency.Time.TimeIntervals)
                 {
-                    double xOfTime = 1000.0*StaticDisplacement * TransferFunction * Math.Cos(Force.Frequency.ExcitationFrequencyRad * item);
+                    double xOfTime = 1000.0*StaticDisplacement * TransferFunction * Math.Cos((Force.Frequency.ExcitationFrequencyRad * item)+Phy);
                     Displacement.Add(xOfTime);
                 }
             }
@@ -239,6 +239,8 @@ namespace Input
             {
             }
         }
+
+
 
 
         

@@ -48,7 +48,7 @@ namespace Output
                 c = Convert.ToDouble(Console.ReadLine());
 
 
-                while(m <= 0.0)
+                while (m <= 0.0)
                 {
                     Console.WriteLine("Vehicle mass cannot be zero or a negative value. Reenter Vehicle Mass.");
                     m = Convert.ToDouble(Console.ReadLine());
@@ -68,7 +68,7 @@ namespace Output
 
             VehicleData vehicle = new VehicleData(m, k, c, force);
             vehicle.CalculateDisplacement();
-            vehicle.SaveAsCSV(@"C:\Users\Aditya\Documents\VS\GitHub\InputWaveForm\OutputFile.csv");
+            vehicle.SaveAsCSV(@"C:\Users\Aditya\Documents\VS\GitHub\InputWaveForm\OutputCSV\OutputFile.csv");
 
             Console.ReadLine();
         }
