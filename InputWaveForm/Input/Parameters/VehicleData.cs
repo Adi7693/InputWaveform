@@ -46,7 +46,7 @@ namespace Input
                 return _vehicleMass;
             }
 
-            private set
+            set
             {
                 if(!value.Equals(_vehicleMass))
                 {
@@ -67,7 +67,7 @@ namespace Input
                 return _springStiffness;
             }
 
-            private set
+            set
             {
                 if (!value.Equals(_springStiffness))
                 {
@@ -86,7 +86,7 @@ namespace Input
                 return _dampingCoefficient;
             }
 
-            private set
+            set
             {
                 if(!value.Equals(_dampingCoefficient))
                 {
@@ -221,9 +221,6 @@ namespace Input
             }
         }
 
-
-
-
         public void SaveAsCSV(string FilePath)
         {
             StringBuilder CSV = new StringBuilder();
@@ -255,8 +252,8 @@ namespace Input
 
 
 
-        
-           
+
+
 
     }
 }

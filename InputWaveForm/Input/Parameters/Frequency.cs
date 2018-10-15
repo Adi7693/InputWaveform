@@ -9,7 +9,15 @@ namespace Input
     public class Frequency
     {
 
-        private bool NeedToCalculate;
+        public Frequency()
+        {
+            ExcitationFrequencyHz = 0.0;
+
+            NeedToRecalculate = false;
+            
+        }
+
+        private bool NeedToRecalculate;
         private double _excitationFrequency;
         private double _excitationFrequencyHz;
 
@@ -18,7 +26,7 @@ namespace Input
         {
             ExcitationFrequencyHz = excitationFrequency;
             Time = time;
-            NeedToCalculate = true;
+            NeedToRecalculate = true;
 
         }
 
@@ -37,7 +45,7 @@ namespace Input
                 {
                     _time = value;
 
-                    NeedToCalculate = true;
+                    NeedToRecalculate = true;
                 }
             }
         }
@@ -55,7 +63,7 @@ namespace Input
                 if (!value.Equals(_excitationFrequencyHz))
                 {
                     _excitationFrequencyHz = value;
-                    NeedToCalculate = true;
+                    NeedToRecalculate = true;
                 }
             }
         }
@@ -74,7 +82,7 @@ namespace Input
 
         public void CosineCalculate()
         {
-            if (NeedToCalculate)
+            if (NeedToRecalculate)
             {
                 if (CosineOscillation == null)
                 {
@@ -93,7 +101,7 @@ namespace Input
                     CosineOscillation.Add(w);
                 }
 
-                NeedToCalculate = false;
+                NeedToRecalculate = false;
 
             }
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _1DoFSimulator.Properties
+namespace UI.Properties
 {
 
 

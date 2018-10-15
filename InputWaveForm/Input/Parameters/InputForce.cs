@@ -8,10 +8,17 @@ namespace Input
 {
     public class InputForce
     {
+        public InputForce()
+        {
+            Force = 0.0;
+        }
+
+
         private double _force;
         private Frequency _frequency;
 
         public bool NeedToCalculate;
+
 
 
         public InputForce(double F0, Frequency w, Time time)
