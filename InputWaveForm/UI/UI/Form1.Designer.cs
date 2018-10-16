@@ -61,7 +61,9 @@
             this.StartTimeTextBox = new System.Windows.Forms.TextBox();
             this.PlotTabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.InputDataGridView = new System.Windows.Forms.DataGridView();
             this.NaturalFrequencyHzTextBox = new System.Windows.Forms.TextBox();
             this.SCNaturalFrequencyHz = new System.Windows.Forms.Label();
             this.SCNaturalFrequencyHzLabel = new System.Windows.Forms.Label();
@@ -82,15 +84,13 @@
             this.label17 = new System.Windows.Forms.Label();
             this.PlotButton = new System.Windows.Forms.Button();
             this.ExportButton = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.InputDataGridView = new System.Windows.Forms.DataGridView();
             this.InputParametersGroupBox.SuspendLayout();
             this.PlotTabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.SystemCharacterisitcsLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputDataGridView)).BeginInit();
+            this.SystemCharacterisitcsLabel.SuspendLayout();
             this.SuspendLayout();
             // 
             // InputParametersGroupBox
@@ -152,11 +152,11 @@
             // 
             // ExcitationFrequencyRadTextBox
             // 
-            this.ExcitationFrequencyRadTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExcitationFrequencyRadTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExcitationFrequencyRadTextBox.Location = new System.Drawing.Point(181, 148);
             this.ExcitationFrequencyRadTextBox.Name = "ExcitationFrequencyRadTextBox";
             this.ExcitationFrequencyRadTextBox.ReadOnly = true;
-            this.ExcitationFrequencyRadTextBox.Size = new System.Drawing.Size(93, 21);
+            this.ExcitationFrequencyRadTextBox.Size = new System.Drawing.Size(93, 22);
             this.ExcitationFrequencyRadTextBox.TabIndex = 0;
             // 
             // IPExcitationFrequencyRadLabel
@@ -321,73 +321,73 @@
             // 
             // DampingCoefficientTextLabel
             // 
-            this.DampingCoefficientTextLabel.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DampingCoefficientTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DampingCoefficientTextLabel.Location = new System.Drawing.Point(181, 256);
             this.DampingCoefficientTextLabel.Name = "DampingCoefficientTextLabel";
-            this.DampingCoefficientTextLabel.Size = new System.Drawing.Size(93, 21);
+            this.DampingCoefficientTextLabel.Size = new System.Drawing.Size(93, 22);
             this.DampingCoefficientTextLabel.TabIndex = 0;
             this.DampingCoefficientTextLabel.LostFocus += new System.EventHandler(this.DampingCoefficientTextLabel_TextChanged);
             // 
             // SpringStiffnessTextBox
             // 
-            this.SpringStiffnessTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpringStiffnessTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpringStiffnessTextBox.Location = new System.Drawing.Point(181, 229);
             this.SpringStiffnessTextBox.Name = "SpringStiffnessTextBox";
-            this.SpringStiffnessTextBox.Size = new System.Drawing.Size(93, 21);
+            this.SpringStiffnessTextBox.Size = new System.Drawing.Size(93, 22);
             this.SpringStiffnessTextBox.TabIndex = 0;
             this.SpringStiffnessTextBox.LostFocus += new System.EventHandler(this.SpringStiffnessTextBox_TextChanged);
             // 
             // VehicleMassTextBox
             // 
-            this.VehicleMassTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VehicleMassTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VehicleMassTextBox.Location = new System.Drawing.Point(181, 202);
             this.VehicleMassTextBox.Name = "VehicleMassTextBox";
-            this.VehicleMassTextBox.Size = new System.Drawing.Size(93, 21);
+            this.VehicleMassTextBox.Size = new System.Drawing.Size(93, 22);
             this.VehicleMassTextBox.TabIndex = 0;
             this.VehicleMassTextBox.LostFocus += new System.EventHandler(this.VehicleMassTextBox_TextChanged);
             // 
             // InputForceTextBox
             // 
-            this.InputForceTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InputForceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputForceTextBox.Location = new System.Drawing.Point(181, 175);
             this.InputForceTextBox.Name = "InputForceTextBox";
-            this.InputForceTextBox.Size = new System.Drawing.Size(93, 21);
+            this.InputForceTextBox.Size = new System.Drawing.Size(93, 22);
             this.InputForceTextBox.TabIndex = 0;
             this.InputForceTextBox.LostFocus += new System.EventHandler(this.InputForceTextBox_TextChanged);
             // 
             // ExcitationFrequencyHzTextBox
             // 
-            this.ExcitationFrequencyHzTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExcitationFrequencyHzTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExcitationFrequencyHzTextBox.Location = new System.Drawing.Point(181, 121);
             this.ExcitationFrequencyHzTextBox.Name = "ExcitationFrequencyHzTextBox";
-            this.ExcitationFrequencyHzTextBox.Size = new System.Drawing.Size(93, 21);
+            this.ExcitationFrequencyHzTextBox.Size = new System.Drawing.Size(93, 22);
             this.ExcitationFrequencyHzTextBox.TabIndex = 0;
             this.ExcitationFrequencyHzTextBox.TextChanged += new System.EventHandler(this.ExcitationFrequencyHzTextBox_TextChanged);
             // 
             // TimeStepTextBox
             // 
-            this.TimeStepTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeStepTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeStepTextBox.Location = new System.Drawing.Point(181, 94);
             this.TimeStepTextBox.Name = "TimeStepTextBox";
-            this.TimeStepTextBox.Size = new System.Drawing.Size(93, 21);
+            this.TimeStepTextBox.Size = new System.Drawing.Size(93, 22);
             this.TimeStepTextBox.TabIndex = 0;
             this.TimeStepTextBox.LostFocus += new System.EventHandler(this.TimeStepTextBox_TextChanged);
             // 
             // EndTimeTextBox
             // 
-            this.EndTimeTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndTimeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndTimeTextBox.Location = new System.Drawing.Point(181, 67);
             this.EndTimeTextBox.Name = "EndTimeTextBox";
-            this.EndTimeTextBox.Size = new System.Drawing.Size(93, 21);
+            this.EndTimeTextBox.Size = new System.Drawing.Size(93, 22);
             this.EndTimeTextBox.TabIndex = 0;
             this.EndTimeTextBox.LostFocus += new System.EventHandler(this.EndTimeTextBox_TextChanged);
             // 
             // StartTimeTextBox
             // 
-            this.StartTimeTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartTimeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartTimeTextBox.Location = new System.Drawing.Point(181, 40);
             this.StartTimeTextBox.Name = "StartTimeTextBox";
-            this.StartTimeTextBox.Size = new System.Drawing.Size(93, 21);
+            this.StartTimeTextBox.Size = new System.Drawing.Size(93, 22);
             this.StartTimeTextBox.TabIndex = 0;
             this.StartTimeTextBox.LostFocus += new System.EventHandler(this.StartTimeTextBox_TextChanged);
             // 
@@ -412,24 +412,51 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(6, 6);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.CustomProperties = "IsXAxisQuantitative=True";
+            series1.Legend = "Legend1";
+            series1.Name = "Input";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1211, 784);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.InputDataGridView);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(886, 688);
+            this.tabPage2.Size = new System.Drawing.Size(1223, 796);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // InputDataGridView
+            // 
+            this.InputDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InputDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.InputDataGridView.Name = "InputDataGridView";
+            this.InputDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.InputDataGridView.Size = new System.Drawing.Size(488, 682);
+            this.InputDataGridView.TabIndex = 0;
+            // 
             // NaturalFrequencyHzTextBox
             // 
-            this.NaturalFrequencyHzTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NaturalFrequencyHzTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NaturalFrequencyHzTextBox.Location = new System.Drawing.Point(181, 44);
             this.NaturalFrequencyHzTextBox.Name = "NaturalFrequencyHzTextBox";
             this.NaturalFrequencyHzTextBox.ReadOnly = true;
-            this.NaturalFrequencyHzTextBox.Size = new System.Drawing.Size(93, 21);
+            this.NaturalFrequencyHzTextBox.Size = new System.Drawing.Size(93, 22);
             this.NaturalFrequencyHzTextBox.TabIndex = 0;
             // 
             // SCNaturalFrequencyHz
@@ -542,11 +569,11 @@
             // 
             // SCPhyTextBox
             // 
-            this.SCPhyTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SCPhyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SCPhyTextBox.Location = new System.Drawing.Point(181, 179);
             this.SCPhyTextBox.Name = "SCPhyTextBox";
             this.SCPhyTextBox.ReadOnly = true;
-            this.SCPhyTextBox.Size = new System.Drawing.Size(93, 21);
+            this.SCPhyTextBox.Size = new System.Drawing.Size(93, 22);
             this.SCPhyTextBox.TabIndex = 0;
             // 
             // SCPhyUnitsRadLabel
@@ -561,29 +588,29 @@
             // 
             // FrequencyRatioTextBox
             // 
-            this.FrequencyRatioTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FrequencyRatioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FrequencyRatioTextBox.Location = new System.Drawing.Point(181, 152);
             this.FrequencyRatioTextBox.Name = "FrequencyRatioTextBox";
             this.FrequencyRatioTextBox.ReadOnly = true;
-            this.FrequencyRatioTextBox.Size = new System.Drawing.Size(93, 21);
+            this.FrequencyRatioTextBox.Size = new System.Drawing.Size(93, 22);
             this.FrequencyRatioTextBox.TabIndex = 0;
             // 
             // DampingRatioTextBox
             // 
-            this.DampingRatioTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DampingRatioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DampingRatioTextBox.Location = new System.Drawing.Point(181, 125);
             this.DampingRatioTextBox.Name = "DampingRatioTextBox";
             this.DampingRatioTextBox.ReadOnly = true;
-            this.DampingRatioTextBox.Size = new System.Drawing.Size(93, 21);
+            this.DampingRatioTextBox.Size = new System.Drawing.Size(93, 22);
             this.DampingRatioTextBox.TabIndex = 0;
             // 
             // CriticalDampingTextBox
             // 
-            this.CriticalDampingTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CriticalDampingTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CriticalDampingTextBox.Location = new System.Drawing.Point(181, 98);
             this.CriticalDampingTextBox.Name = "CriticalDampingTextBox";
             this.CriticalDampingTextBox.ReadOnly = true;
-            this.CriticalDampingTextBox.Size = new System.Drawing.Size(93, 21);
+            this.CriticalDampingTextBox.Size = new System.Drawing.Size(93, 22);
             this.CriticalDampingTextBox.TabIndex = 0;
             // 
             // SCCriticalCampingUnitLabel
@@ -598,11 +625,11 @@
             // 
             // NaturalFrequencyRadTextBox
             // 
-            this.NaturalFrequencyRadTextBox.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NaturalFrequencyRadTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NaturalFrequencyRadTextBox.Location = new System.Drawing.Point(181, 71);
             this.NaturalFrequencyRadTextBox.Name = "NaturalFrequencyRadTextBox";
             this.NaturalFrequencyRadTextBox.ReadOnly = true;
-            this.NaturalFrequencyRadTextBox.Size = new System.Drawing.Size(93, 21);
+            this.NaturalFrequencyRadTextBox.Size = new System.Drawing.Size(93, 22);
             this.NaturalFrequencyRadTextBox.TabIndex = 0;
             // 
             // label17
@@ -638,33 +665,6 @@
             this.ExportButton.Text = "Export";
             this.ExportButton.UseVisualStyleBackColor = true;
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(6, 6);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.CustomProperties = "IsXAxisQuantitative=True";
-            series1.Legend = "Legend1";
-            series1.Name = "Input";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1211, 784);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // InputDataGridView
-            // 
-            this.InputDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.InputDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.InputDataGridView.Name = "InputDataGridView";
-            this.InputDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.InputDataGridView.Size = new System.Drawing.Size(488, 682);
-            this.InputDataGridView.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -682,11 +682,11 @@
             this.InputParametersGroupBox.PerformLayout();
             this.PlotTabs.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.InputDataGridView)).EndInit();
             this.SystemCharacterisitcsLabel.ResumeLayout(false);
             this.SystemCharacterisitcsLabel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InputDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }

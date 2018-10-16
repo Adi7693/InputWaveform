@@ -66,7 +66,7 @@ namespace Output
             InputForce force = new InputForce(f0, frequency, time);
             force.ForceCalculate();
 
-            VehicleData vehicle = new VehicleData(m, k, c, force);
+            InputData vehicle = new InputData(m, k, c, force);
             vehicle.CalculateDisplacement();
             vehicle.SaveAsCSV(@"C:\Users\Aditya\Documents\VS\GitHub\InputWaveForm\OutputCSV\OutputFile.csv");
 
