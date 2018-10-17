@@ -31,6 +31,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.InputParametersGroupBox = new System.Windows.Forms.GroupBox();
             this.ExcitationFrequencyRadUnitLabel = new System.Windows.Forms.Label();
             this.DampingCoefficientUnitLabel = new System.Windows.Forms.Label();
@@ -63,7 +66,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.InputDataGridView = new System.Windows.Forms.DataGridView();
             this.NaturalFrequencyHzTextBox = new System.Windows.Forms.TextBox();
             this.SCNaturalFrequencyHz = new System.Windows.Forms.Label();
             this.SCNaturalFrequencyHzLabel = new System.Windows.Forms.Label();
@@ -84,13 +86,14 @@
             this.label17 = new System.Windows.Forms.Label();
             this.PlotButton = new System.Windows.Forms.Button();
             this.ExportButton = new System.Windows.Forms.Button();
+            this.DisplacementChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.InputParametersGroupBox.SuspendLayout();
             this.PlotTabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.InputDataGridView)).BeginInit();
             this.SystemCharacterisitcsLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplacementChart)).BeginInit();
             this.SuspendLayout();
             // 
             // InputParametersGroupBox
@@ -432,7 +435,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.InputDataGridView);
+            this.tabPage2.Controls.Add(this.DisplacementChart);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -440,15 +443,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // InputDataGridView
-            // 
-            this.InputDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.InputDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.InputDataGridView.Name = "InputDataGridView";
-            this.InputDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.InputDataGridView.Size = new System.Drawing.Size(488, 682);
-            this.InputDataGridView.TabIndex = 0;
             // 
             // NaturalFrequencyHzTextBox
             // 
@@ -665,6 +659,23 @@
             this.ExportButton.Text = "Export";
             this.ExportButton.UseVisualStyleBackColor = true;
             // 
+            // DisplacementChart
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.DisplacementChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.DisplacementChart.Legends.Add(legend2);
+            this.DisplacementChart.Location = new System.Drawing.Point(6, 6);
+            this.DisplacementChart.Name = "DisplacementChart";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Displacement";
+            this.DisplacementChart.Series.Add(series2);
+            this.DisplacementChart.Size = new System.Drawing.Size(1211, 784);
+            this.DisplacementChart.TabIndex = 0;
+            this.DisplacementChart.Text = "Displacement";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,9 +695,9 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.InputDataGridView)).EndInit();
             this.SystemCharacterisitcsLabel.ResumeLayout(false);
             this.SystemCharacterisitcsLabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplacementChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -744,7 +755,7 @@
         private System.Windows.Forms.Button PlotButton;
         private System.Windows.Forms.Button ExportButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataGridView InputDataGridView;
+        private System.Windows.Forms.DataVisualization.Charting.Chart DisplacementChart;
     }
 }
 
