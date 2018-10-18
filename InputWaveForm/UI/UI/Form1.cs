@@ -169,21 +169,30 @@ namespace UI
                 table.Rows.Add(InputData.TimeIntervals[i], InputData.ForceOscillations[i]);
             }
 
-            //chart1.Series.Clear();
+            
             chart1.Series["Input"].XValueMember = "Time";
             chart1.Series["Input"].YValueMembers = "Input Force";
             chart1.DataSource = table;
             chart1.DataBind();
             chart1.Update();
 
-            //chart1
-            //table.Columns[0].A
-            //chart1.DataBind();
 
+            DataTable outputTable = new DataTable("Displacement vs Time");
+            outputTable.Columns.Add("Time", typeof(double));
+            outputTable.Columns.Add("Displacement", typeof(double));
 
-            //tabg
-            InputDataGridView.DataSource = table;
-            InputDataGridView.Update();
+            for (int i=0; i<InputData.TimeIntervals.Count; i++)
+            {
+                outputTable.Rows.Add(InputData.TimeIntervals[i], InputData.Displacement[i]);
+            }
+
+            DisplacementChart.Series["Displacement"].XValueMember = "Time";
+            DisplacementChart.Series["Displacement"].YValueMembers = "Displacement";
+            DisplacementChart.DataSource = outputTable;
+            DisplacementChart.DataBind();
+            DisplacementChart.Update();
+
+            
         }
     }
 }

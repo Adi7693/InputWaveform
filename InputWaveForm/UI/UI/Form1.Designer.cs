@@ -66,6 +66,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.DisplacementChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.NaturalFrequencyHzTextBox = new System.Windows.Forms.TextBox();
             this.SCNaturalFrequencyHz = new System.Windows.Forms.Label();
             this.SCNaturalFrequencyHzLabel = new System.Windows.Forms.Label();
@@ -85,15 +86,13 @@
             this.NaturalFrequencyRadTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.PlotButton = new System.Windows.Forms.Button();
-            this.ExportButton = new System.Windows.Forms.Button();
-            this.DisplacementChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.InputParametersGroupBox.SuspendLayout();
             this.PlotTabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.SystemCharacterisitcsLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DisplacementChart)).BeginInit();
+            this.SystemCharacterisitcsLabel.SuspendLayout();
             this.SuspendLayout();
             // 
             // InputParametersGroupBox
@@ -444,6 +443,23 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // DisplacementChart
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.DisplacementChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.DisplacementChart.Legends.Add(legend2);
+            this.DisplacementChart.Location = new System.Drawing.Point(6, 6);
+            this.DisplacementChart.Name = "DisplacementChart";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Displacement";
+            this.DisplacementChart.Series.Add(series2);
+            this.DisplacementChart.Size = new System.Drawing.Size(1211, 784);
+            this.DisplacementChart.TabIndex = 0;
+            this.DisplacementChart.Text = "Displacement";
+            // 
             // NaturalFrequencyHzTextBox
             // 
             this.NaturalFrequencyHzTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -477,7 +493,7 @@
             // 
             this.CalculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalculateButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CalculateButton.Location = new System.Drawing.Point(12, 697);
+            this.CalculateButton.Location = new System.Drawing.Point(12, 805);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(113, 29);
             this.CalculateButton.TabIndex = 2;
@@ -640,7 +656,7 @@
             // 
             this.PlotButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlotButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PlotButton.Location = new System.Drawing.Point(250, 697);
+            this.PlotButton.Location = new System.Drawing.Point(250, 805);
             this.PlotButton.Name = "PlotButton";
             this.PlotButton.Size = new System.Drawing.Size(113, 29);
             this.PlotButton.TabIndex = 2;
@@ -648,41 +664,12 @@
             this.PlotButton.UseVisualStyleBackColor = true;
             this.PlotButton.Click += new System.EventHandler(this.PlotButton_Click);
             // 
-            // ExportButton
-            // 
-            this.ExportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExportButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ExportButton.Location = new System.Drawing.Point(131, 697);
-            this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(113, 29);
-            this.ExportButton.TabIndex = 2;
-            this.ExportButton.Text = "Export";
-            this.ExportButton.UseVisualStyleBackColor = true;
-            // 
-            // DisplacementChart
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.DisplacementChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.DisplacementChart.Legends.Add(legend2);
-            this.DisplacementChart.Location = new System.Drawing.Point(6, 6);
-            this.DisplacementChart.Name = "DisplacementChart";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Displacement";
-            this.DisplacementChart.Series.Add(series2);
-            this.DisplacementChart.Size = new System.Drawing.Size(1211, 784);
-            this.DisplacementChart.TabIndex = 0;
-            this.DisplacementChart.Text = "Displacement";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1612, 846);
             this.Controls.Add(this.SystemCharacterisitcsLabel);
-            this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.PlotButton);
             this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.PlotTabs);
@@ -695,9 +682,9 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DisplacementChart)).EndInit();
             this.SystemCharacterisitcsLabel.ResumeLayout(false);
             this.SystemCharacterisitcsLabel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DisplacementChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -753,7 +740,6 @@
         private System.Windows.Forms.TextBox NaturalFrequencyRadTextBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button PlotButton;
-        private System.Windows.Forms.Button ExportButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart DisplacementChart;
     }
