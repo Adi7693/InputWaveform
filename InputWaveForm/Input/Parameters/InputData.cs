@@ -14,8 +14,8 @@ namespace Input
         private bool FrequencyNeedsToRecalculate;
         private bool ForceNeedsToRecalculate;
         private bool VehicleDataNeedsToRecalculate;
+        
         #region Constructor
-
         public InputData()
         {
             StartTime = 0.0;
@@ -47,7 +47,6 @@ namespace Input
                 if (!value.Equals(_startTime))
                 {
                     _startTime = value;
-
                     TimeNeedsToRecalculate = true;
                 }
             }
@@ -65,7 +64,6 @@ namespace Input
                 if (!value.Equals(_timeStep))
                 {
                     _timeStep = value;
-
                     TimeNeedsToRecalculate = true;
                 }
             }
@@ -81,11 +79,19 @@ namespace Input
             }
             set
             {
+
                 if (!value.Equals(_endTime))
                 {
-                    _endTime = value;
+                    if (value > StartTime)
+                    {
+                        _endTime = value;
+                        TimeNeedsToRecalculate = true;
+                    }
+                }
 
-                    TimeNeedsToRecalculate = true;
+                else
+                {
+                    TimeNeedsToRecalculate = false;
                 }
             }
         }
@@ -133,6 +139,8 @@ namespace Input
 
         private double _vehicleMass;
         // In Kg
+
+        
         public double VehicleMass
         {
             get
@@ -295,6 +303,8 @@ namespace Input
 
         public List<double> Displacement { get; private set; }
 
+        public List<double> Velocity { get; private set; }
+
         private void TimeCalculate()
         {
             if (TimeNeedsToRecalculate)
@@ -399,20 +409,8 @@ namespace Input
             CosineCalculate();
             ForceCalculate();
             DisplacementCalculate();
-        }    
-#endregion
-
-
-
-
-
-        
-
-
-
-
-
-
+        }
+        #endregion
 
     }
 }
