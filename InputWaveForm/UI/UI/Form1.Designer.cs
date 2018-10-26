@@ -28,19 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.InputParametersGroupBox = new System.Windows.Forms.GroupBox();
             this.ExcitationFrequencyRadUnitLabel = new System.Windows.Forms.Label();
+            this.InitialVelocityUnitLabel = new System.Windows.Forms.Label();
             this.DampingCoefficientUnitLabel = new System.Windows.Forms.Label();
             this.ExcitationFrequencyRadTextBox = new System.Windows.Forms.TextBox();
             this.IPExcitationFrequencyRadLabel = new System.Windows.Forms.Label();
+            this.InitialDisplacementUnitLabel = new System.Windows.Forms.Label();
             this.SpringStiffnessUnitLabel = new System.Windows.Forms.Label();
             this.VehicleMassUnitLabel = new System.Windows.Forms.Label();
             this.InputForceUnitLabel = new System.Windows.Forms.Label();
@@ -48,7 +58,9 @@
             this.TimeStepUnitLabel = new System.Windows.Forms.Label();
             this.EndTImeUnitLabel = new System.Windows.Forms.Label();
             this.StartTimeUnitLabel = new System.Windows.Forms.Label();
+            this.InitialVelocityLabel = new System.Windows.Forms.Label();
             this.IPDampingCoefficientLabel = new System.Windows.Forms.Label();
+            this.InitialDisplacementLabel = new System.Windows.Forms.Label();
             this.IPSpringStiffnessLabel = new System.Windows.Forms.Label();
             this.IPVehicleMassLabel = new System.Windows.Forms.Label();
             this.IPInputForceLabel = new System.Windows.Forms.Label();
@@ -56,6 +68,8 @@
             this.IPTimeStepLabel = new System.Windows.Forms.Label();
             this.IPEndTimeLabel = new System.Windows.Forms.Label();
             this.IPStartTimeLabel = new System.Windows.Forms.Label();
+            this.InitialVelocityTextBox = new System.Windows.Forms.TextBox();
+            this.InitialDisplacementTextBox = new System.Windows.Forms.TextBox();
             this.DampingCoefficientTextLabel = new System.Windows.Forms.TextBox();
             this.SpringStiffnessTextBox = new System.Windows.Forms.TextBox();
             this.VehicleMassTextBox = new System.Windows.Forms.TextBox();
@@ -68,7 +82,7 @@
             this.InputForceTab = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.BodyDisplacementTab = new System.Windows.Forms.TabPage();
-            this.DisplacementChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ResponseToInitialConditionChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.NaturalFrequencyHzTextBox = new System.Windows.Forms.TextBox();
             this.SCNaturalFrequencyHz = new System.Windows.Forms.Label();
             this.SCNaturalFrequencyHzLabel = new System.Windows.Forms.Label();
@@ -88,21 +102,27 @@
             this.NaturalFrequencyRadTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.PlotButton = new System.Windows.Forms.Button();
+            this.TotalResponseChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ResponseToHarmonicExcitationChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.InputParametersGroupBox.SuspendLayout();
             this.PlotTabs.SuspendLayout();
             this.InputForceTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.BodyDisplacementTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DisplacementChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResponseToInitialConditionChart)).BeginInit();
             this.SystemCharacterisitcsLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalResponseChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResponseToHarmonicExcitationChart)).BeginInit();
             this.SuspendLayout();
             // 
             // InputParametersGroupBox
             // 
             this.InputParametersGroupBox.Controls.Add(this.ExcitationFrequencyRadUnitLabel);
+            this.InputParametersGroupBox.Controls.Add(this.InitialVelocityUnitLabel);
             this.InputParametersGroupBox.Controls.Add(this.DampingCoefficientUnitLabel);
             this.InputParametersGroupBox.Controls.Add(this.ExcitationFrequencyRadTextBox);
             this.InputParametersGroupBox.Controls.Add(this.IPExcitationFrequencyRadLabel);
+            this.InputParametersGroupBox.Controls.Add(this.InitialDisplacementUnitLabel);
             this.InputParametersGroupBox.Controls.Add(this.SpringStiffnessUnitLabel);
             this.InputParametersGroupBox.Controls.Add(this.VehicleMassUnitLabel);
             this.InputParametersGroupBox.Controls.Add(this.InputForceUnitLabel);
@@ -110,7 +130,9 @@
             this.InputParametersGroupBox.Controls.Add(this.TimeStepUnitLabel);
             this.InputParametersGroupBox.Controls.Add(this.EndTImeUnitLabel);
             this.InputParametersGroupBox.Controls.Add(this.StartTimeUnitLabel);
+            this.InputParametersGroupBox.Controls.Add(this.InitialVelocityLabel);
             this.InputParametersGroupBox.Controls.Add(this.IPDampingCoefficientLabel);
+            this.InputParametersGroupBox.Controls.Add(this.InitialDisplacementLabel);
             this.InputParametersGroupBox.Controls.Add(this.IPSpringStiffnessLabel);
             this.InputParametersGroupBox.Controls.Add(this.IPVehicleMassLabel);
             this.InputParametersGroupBox.Controls.Add(this.IPInputForceLabel);
@@ -118,6 +140,8 @@
             this.InputParametersGroupBox.Controls.Add(this.IPTimeStepLabel);
             this.InputParametersGroupBox.Controls.Add(this.IPEndTimeLabel);
             this.InputParametersGroupBox.Controls.Add(this.IPStartTimeLabel);
+            this.InputParametersGroupBox.Controls.Add(this.InitialVelocityTextBox);
+            this.InputParametersGroupBox.Controls.Add(this.InitialDisplacementTextBox);
             this.InputParametersGroupBox.Controls.Add(this.DampingCoefficientTextLabel);
             this.InputParametersGroupBox.Controls.Add(this.SpringStiffnessTextBox);
             this.InputParametersGroupBox.Controls.Add(this.VehicleMassTextBox);
@@ -129,7 +153,7 @@
             this.InputParametersGroupBox.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputParametersGroupBox.Location = new System.Drawing.Point(12, 12);
             this.InputParametersGroupBox.Name = "InputParametersGroupBox";
-            this.InputParametersGroupBox.Size = new System.Drawing.Size(355, 301);
+            this.InputParametersGroupBox.Size = new System.Drawing.Size(355, 391);
             this.InputParametersGroupBox.TabIndex = 1;
             this.InputParametersGroupBox.TabStop = false;
             this.InputParametersGroupBox.Text = "Input Parameters";
@@ -143,6 +167,16 @@
             this.ExcitationFrequencyRadUnitLabel.Size = new System.Drawing.Size(44, 16);
             this.ExcitationFrequencyRadUnitLabel.TabIndex = 1;
             this.ExcitationFrequencyRadUnitLabel.Text = "rad/s";
+            // 
+            // InitialVelocityUnitLabel
+            // 
+            this.InitialVelocityUnitLabel.AutoSize = true;
+            this.InitialVelocityUnitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InitialVelocityUnitLabel.Location = new System.Drawing.Point(280, 313);
+            this.InitialVelocityUnitLabel.Name = "InitialVelocityUnitLabel";
+            this.InitialVelocityUnitLabel.Size = new System.Drawing.Size(33, 16);
+            this.InitialVelocityUnitLabel.TabIndex = 1;
+            this.InitialVelocityUnitLabel.Text = "m/s";
             // 
             // DampingCoefficientUnitLabel
             // 
@@ -169,9 +203,19 @@
             this.IPExcitationFrequencyRadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IPExcitationFrequencyRadLabel.Location = new System.Drawing.Point(3, 150);
             this.IPExcitationFrequencyRadLabel.Name = "IPExcitationFrequencyRadLabel";
-            this.IPExcitationFrequencyRadLabel.Size = new System.Drawing.Size(82, 16);
+            this.IPExcitationFrequencyRadLabel.Size = new System.Drawing.Size(152, 16);
             this.IPExcitationFrequencyRadLabel.TabIndex = 1;
-            this.IPExcitationFrequencyRadLabel.Text = "Omega (w)";
+            this.IPExcitationFrequencyRadLabel.Text = "Excitation Frequency";
+            // 
+            // InitialDisplacementUnitLabel
+            // 
+            this.InitialDisplacementUnitLabel.AutoSize = true;
+            this.InitialDisplacementUnitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InitialDisplacementUnitLabel.Location = new System.Drawing.Point(280, 286);
+            this.InitialDisplacementUnitLabel.Name = "InitialDisplacementUnitLabel";
+            this.InitialDisplacementUnitLabel.Size = new System.Drawing.Size(20, 16);
+            this.InitialDisplacementUnitLabel.TabIndex = 1;
+            this.InitialDisplacementUnitLabel.Text = "m";
             // 
             // SpringStiffnessUnitLabel
             // 
@@ -243,6 +287,16 @@
             this.StartTimeUnitLabel.TabIndex = 1;
             this.StartTimeUnitLabel.Text = "Seconds";
             // 
+            // InitialVelocityLabel
+            // 
+            this.InitialVelocityLabel.AutoSize = true;
+            this.InitialVelocityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InitialVelocityLabel.Location = new System.Drawing.Point(3, 313);
+            this.InitialVelocityLabel.Name = "InitialVelocityLabel";
+            this.InitialVelocityLabel.Size = new System.Drawing.Size(105, 16);
+            this.InitialVelocityLabel.TabIndex = 1;
+            this.InitialVelocityLabel.Text = "Initial Velocity";
+            // 
             // IPDampingCoefficientLabel
             // 
             this.IPDampingCoefficientLabel.AutoSize = true;
@@ -252,6 +306,16 @@
             this.IPDampingCoefficientLabel.Size = new System.Drawing.Size(147, 16);
             this.IPDampingCoefficientLabel.TabIndex = 1;
             this.IPDampingCoefficientLabel.Text = "Damping Coefficient";
+            // 
+            // InitialDisplacementLabel
+            // 
+            this.InitialDisplacementLabel.AutoSize = true;
+            this.InitialDisplacementLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InitialDisplacementLabel.Location = new System.Drawing.Point(3, 286);
+            this.InitialDisplacementLabel.Name = "InitialDisplacementLabel";
+            this.InitialDisplacementLabel.Size = new System.Drawing.Size(144, 16);
+            this.InitialDisplacementLabel.TabIndex = 1;
+            this.InitialDisplacementLabel.Text = "Initial Displacement";
             // 
             // IPSpringStiffnessLabel
             // 
@@ -289,9 +353,9 @@
             this.IPExcitationFrequencyHzLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IPExcitationFrequencyHzLabel.Location = new System.Drawing.Point(3, 123);
             this.IPExcitationFrequencyHzLabel.Name = "IPExcitationFrequencyHzLabel";
-            this.IPExcitationFrequencyHzLabel.Size = new System.Drawing.Size(152, 16);
+            this.IPExcitationFrequencyHzLabel.Size = new System.Drawing.Size(164, 16);
             this.IPExcitationFrequencyHzLabel.TabIndex = 1;
-            this.IPExcitationFrequencyHzLabel.Text = "Excitation Frequency";
+            this.IPExcitationFrequencyHzLabel.Text = "Excitation Time Period";
             // 
             // IPTimeStepLabel
             // 
@@ -322,6 +386,26 @@
             this.IPStartTimeLabel.Size = new System.Drawing.Size(79, 16);
             this.IPStartTimeLabel.TabIndex = 1;
             this.IPStartTimeLabel.Text = "Start Time";
+            // 
+            // InitialVelocityTextBox
+            // 
+            this.InitialVelocityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InitialVelocityTextBox.Location = new System.Drawing.Point(181, 311);
+            this.InitialVelocityTextBox.Name = "InitialVelocityTextBox";
+            this.InitialVelocityTextBox.Size = new System.Drawing.Size(93, 22);
+            this.InitialVelocityTextBox.TabIndex = 0;
+            this.InitialVelocityTextBox.TextChanged += new System.EventHandler(this.InitialVelocityTextBox_TextChanged);
+            this.InitialVelocityTextBox.LostFocus += new System.EventHandler(this.DampingCoefficientTextLabel_TextChanged);
+            // 
+            // InitialDisplacementTextBox
+            // 
+            this.InitialDisplacementTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InitialDisplacementTextBox.Location = new System.Drawing.Point(181, 284);
+            this.InitialDisplacementTextBox.Name = "InitialDisplacementTextBox";
+            this.InitialDisplacementTextBox.Size = new System.Drawing.Size(93, 22);
+            this.InitialDisplacementTextBox.TabIndex = 0;
+            this.InitialDisplacementTextBox.TextChanged += new System.EventHandler(this.InitialDisplacementTextBox_TextChanged);
+            this.InitialDisplacementTextBox.LostFocus += new System.EventHandler(this.SpringStiffnessTextBox_TextChanged);
             // 
             // DampingCoefficientTextLabel
             // 
@@ -402,7 +486,7 @@
             this.PlotTabs.Location = new System.Drawing.Point(369, 12);
             this.PlotTabs.Name = "PlotTabs";
             this.PlotTabs.SelectedIndex = 0;
-            this.PlotTabs.Size = new System.Drawing.Size(1231, 822);
+            this.PlotTabs.Size = new System.Drawing.Size(962, 750);
             this.PlotTabs.TabIndex = 0;
             // 
             // InputForceTab
@@ -411,64 +495,66 @@
             this.InputForceTab.Location = new System.Drawing.Point(4, 22);
             this.InputForceTab.Name = "InputForceTab";
             this.InputForceTab.Padding = new System.Windows.Forms.Padding(3);
-            this.InputForceTab.Size = new System.Drawing.Size(1223, 796);
+            this.InputForceTab.Size = new System.Drawing.Size(954, 724);
             this.InputForceTab.TabIndex = 0;
             this.InputForceTab.Text = "Input Force";
             this.InputForceTab.UseVisualStyleBackColor = true;
             // 
             // chart1
             // 
-            chartArea1.Name = "Input";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea5.Name = "Input";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(6, 6);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "Input";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.CustomProperties = "IsXAxisQuantitative=True";
-            series1.Legend = "Legend1";
-            series1.Name = "Input Force";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1211, 784);
+            series5.ChartArea = "Input";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.CustomProperties = "IsXAxisQuantitative=True";
+            series5.Legend = "Legend1";
+            series5.Name = "Input Force";
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(952, 722);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "InputForceTitle";
-            title1.Text = "Input Force";
-            this.chart1.Titles.Add(title1);
+            title5.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "InputForceTitle";
+            title5.Text = "Input Force";
+            this.chart1.Titles.Add(title5);
             // 
             // BodyDisplacementTab
             // 
-            this.BodyDisplacementTab.Controls.Add(this.DisplacementChart);
+            this.BodyDisplacementTab.Controls.Add(this.ResponseToHarmonicExcitationChart);
+            this.BodyDisplacementTab.Controls.Add(this.TotalResponseChart);
+            this.BodyDisplacementTab.Controls.Add(this.ResponseToInitialConditionChart);
             this.BodyDisplacementTab.Location = new System.Drawing.Point(4, 22);
             this.BodyDisplacementTab.Name = "BodyDisplacementTab";
             this.BodyDisplacementTab.Padding = new System.Windows.Forms.Padding(3);
-            this.BodyDisplacementTab.Size = new System.Drawing.Size(1223, 796);
+            this.BodyDisplacementTab.Size = new System.Drawing.Size(954, 724);
             this.BodyDisplacementTab.TabIndex = 1;
             this.BodyDisplacementTab.Text = "Body Displacement";
             this.BodyDisplacementTab.UseVisualStyleBackColor = true;
             // 
-            // DisplacementChart
+            // ResponseToInitialConditionChart
             // 
-            chartArea2.Name = "Displacement";
-            this.DisplacementChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.DisplacementChart.Legends.Add(legend2);
-            this.DisplacementChart.Location = new System.Drawing.Point(6, 6);
-            this.DisplacementChart.Name = "DisplacementChart";
-            series2.ChartArea = "Displacement";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Displacement";
-            this.DisplacementChart.Series.Add(series2);
-            this.DisplacementChart.Size = new System.Drawing.Size(1211, 784);
-            this.DisplacementChart.TabIndex = 0;
-            this.DisplacementChart.Text = "Displacement";
-            title2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "BodyDisplacementTitle";
-            title2.Text = "Body Displacement";
-            this.DisplacementChart.Titles.Add(title2);
+            chartArea6.Name = "ResponseToInitialConditionChartArea";
+            this.ResponseToInitialConditionChart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.ResponseToInitialConditionChart.Legends.Add(legend6);
+            this.ResponseToInitialConditionChart.Location = new System.Drawing.Point(6, 6);
+            this.ResponseToInitialConditionChart.Name = "ResponseToInitialConditionChart";
+            series6.ChartArea = "ResponseToInitialConditionChartArea";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Legend = "Legend1";
+            series6.Name = "Response To Initial Condition";
+            this.ResponseToInitialConditionChart.Series.Add(series6);
+            this.ResponseToInitialConditionChart.Size = new System.Drawing.Size(942, 234);
+            this.ResponseToInitialConditionChart.TabIndex = 0;
+            this.ResponseToInitialConditionChart.Text = "Response To Initial Condition";
+            title6.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "ResponseToInitialConditionTitle";
+            title6.Text = "Response To Initial Condition";
+            this.ResponseToInitialConditionChart.Titles.Add(title6);
             // 
             // NaturalFrequencyHzTextBox
             // 
@@ -485,9 +571,9 @@
             this.SCNaturalFrequencyHz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SCNaturalFrequencyHz.Location = new System.Drawing.Point(3, 46);
             this.SCNaturalFrequencyHz.Name = "SCNaturalFrequencyHz";
-            this.SCNaturalFrequencyHz.Size = new System.Drawing.Size(161, 16);
+            this.SCNaturalFrequencyHz.Size = new System.Drawing.Size(173, 16);
             this.SCNaturalFrequencyHz.TabIndex = 1;
-            this.SCNaturalFrequencyHz.Text = "Natural Frequency (fn)";
+            this.SCNaturalFrequencyHz.Text = "Natural Time Period (fn)";
             // 
             // SCNaturalFrequencyHzLabel
             // 
@@ -503,7 +589,7 @@
             // 
             this.CalculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalculateButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CalculateButton.Location = new System.Drawing.Point(12, 805);
+            this.CalculateButton.Location = new System.Drawing.Point(12, 627);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(113, 29);
             this.CalculateButton.TabIndex = 2;
@@ -530,7 +616,7 @@
             this.SystemCharacterisitcsLabel.Controls.Add(this.NaturalFrequencyHzTextBox);
             this.SystemCharacterisitcsLabel.Controls.Add(this.SCNaturalFrequencyHzLabel);
             this.SystemCharacterisitcsLabel.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SystemCharacterisitcsLabel.Location = new System.Drawing.Point(12, 319);
+            this.SystemCharacterisitcsLabel.Location = new System.Drawing.Point(12, 409);
             this.SystemCharacterisitcsLabel.Name = "SystemCharacterisitcsLabel";
             this.SystemCharacterisitcsLabel.Size = new System.Drawing.Size(355, 212);
             this.SystemCharacterisitcsLabel.TabIndex = 3;
@@ -666,7 +752,7 @@
             // 
             this.PlotButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlotButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PlotButton.Location = new System.Drawing.Point(250, 805);
+            this.PlotButton.Location = new System.Drawing.Point(250, 627);
             this.PlotButton.Name = "PlotButton";
             this.PlotButton.Size = new System.Drawing.Size(113, 29);
             this.PlotButton.TabIndex = 2;
@@ -674,11 +760,53 @@
             this.PlotButton.UseVisualStyleBackColor = true;
             this.PlotButton.Click += new System.EventHandler(this.PlotButton_Click);
             // 
+            // TotalResponseChart
+            // 
+            chartArea7.Name = "TotalResponseChartArea";
+            this.TotalResponseChart.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.TotalResponseChart.Legends.Add(legend7);
+            this.TotalResponseChart.Location = new System.Drawing.Point(6, 486);
+            this.TotalResponseChart.Name = "TotalResponseChart";
+            series7.ChartArea = "TotalResponseChartArea";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Legend = "Legend1";
+            series7.Name = "Total Response";
+            this.TotalResponseChart.Series.Add(series7);
+            this.TotalResponseChart.Size = new System.Drawing.Size(864, 234);
+            this.TotalResponseChart.TabIndex = 0;
+            this.TotalResponseChart.Text = "TotalResponse";
+            title7.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title7.Name = "TotalResponseTitle";
+            title7.Text = "Total Response";
+            this.TotalResponseChart.Titles.Add(title7);
+            // 
+            // ResponseToHarmonicExcitationChart
+            // 
+            chartArea8.Name = "ResponseToHarmonicInputChartArea";
+            this.ResponseToHarmonicExcitationChart.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.ResponseToHarmonicExcitationChart.Legends.Add(legend8);
+            this.ResponseToHarmonicExcitationChart.Location = new System.Drawing.Point(3, 246);
+            this.ResponseToHarmonicExcitationChart.Name = "ResponseToHarmonicExcitationChart";
+            series8.ChartArea = "ResponseToHarmonicInputChartArea";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Legend = "Legend1";
+            series8.Name = "Response To Harmonic Input";
+            this.ResponseToHarmonicExcitationChart.Series.Add(series8);
+            this.ResponseToHarmonicExcitationChart.Size = new System.Drawing.Size(942, 234);
+            this.ResponseToHarmonicExcitationChart.TabIndex = 0;
+            this.ResponseToHarmonicExcitationChart.Text = "ResponseToHarmonicInput";
+            title8.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title8.Name = "ResponseToHarmonicInputTitle";
+            title8.Text = "Response To Harmonic Input";
+            this.ResponseToHarmonicExcitationChart.Titles.Add(title8);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1612, 846);
+            this.ClientSize = new System.Drawing.Size(1343, 772);
             this.Controls.Add(this.SystemCharacterisitcsLabel);
             this.Controls.Add(this.PlotButton);
             this.Controls.Add(this.CalculateButton);
@@ -692,9 +820,11 @@
             this.InputForceTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.BodyDisplacementTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DisplacementChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResponseToInitialConditionChart)).EndInit();
             this.SystemCharacterisitcsLabel.ResumeLayout(false);
             this.SystemCharacterisitcsLabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalResponseChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResponseToHarmonicExcitationChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -751,7 +881,15 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button PlotButton;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart DisplacementChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ResponseToInitialConditionChart;
+        private System.Windows.Forms.Label InitialVelocityUnitLabel;
+        private System.Windows.Forms.Label InitialDisplacementUnitLabel;
+        private System.Windows.Forms.Label InitialVelocityLabel;
+        private System.Windows.Forms.Label InitialDisplacementLabel;
+        private System.Windows.Forms.TextBox InitialVelocityTextBox;
+        private System.Windows.Forms.TextBox InitialDisplacementTextBox;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ResponseToHarmonicExcitationChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart TotalResponseChart;
     }
 }
 

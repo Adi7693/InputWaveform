@@ -211,6 +211,32 @@ namespace UI
             }
         }
 
+        private void InitialDisplacementTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double newInitialDisplacement = 0.0;
+
+            if(double.TryParse(InitialDisplacementTextBox.Text,out newInitialDisplacement))
+            {
+                InputData.InitialDisplacement = newInitialDisplacement;
+                NeedsToRecalculate = true;
+            }
+
+        }
+
+        private void InitialVelocityTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double newInitialVelocity = 0.0;
+
+            if(double.TryParse(InitialVelocityTextBox.Text,out newInitialVelocity))
+            {
+                InputData.InitialVelocity = newInitialVelocity;
+                needsToRecalculate = true;
+            }
+
+        }
+
+
+
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             if (NeedsToRecalculate)
@@ -258,8 +284,9 @@ namespace UI
                 chart1.DataBind();
                 chart1.Update();
 
-                //chart1.ChartAreas["Input"].AxisY.Maximum = InputData.ForceOscillations.Max();
-                //chart1.ChartAreas["Input"].AxisY.Minimum = InputData.ForceOscillations.Min();
+
+                chart1.ChartAreas["Input"].AxisY.Maximum = InputData.ForceOscillations.Max();
+                chart1.ChartAreas["Input"].AxisY.Minimum = InputData.ForceOscillations.Min();
 
 
                 chart1.ChartAreas["Input"].AxisX.MajorGrid.Interval = 1;
@@ -269,26 +296,87 @@ namespace UI
 
 
 
-                DataTable outputTable = new DataTable("Displacement vs Time");
-                outputTable.Columns.Add("Time", typeof(double));
-                outputTable.Columns.Add("Displacement", typeof(double));
+                //DataTable outputTable = new DataTable("Displacement vs Time");
+                //outputTable.Columns.Add("Time", typeof(double));
+                //outputTable.Columns.Add("Displacement", typeof(double));
+
+                //for (int i = 0; i < InputData.TimeIntervals.Count; i++)
+                //{
+                //    //outputTable.Rows.Add(InputData.TimeIntervals[i], InputData.ResponseToExcitedVibration[i]);
+                //    outputTable.Rows.Add(InputData.TimeIntervals[i], InputData.TotalResponse[i]);
+                //    //outputTable.Rows.Add(InputData.TimeIntervals[i], InputData.ResponseToInitialConditions[i]);
+                //}
+
+                //ResponseToInitialConditionChart.Series["Displacement"].XValueMember = "Time";
+                //ResponseToInitialConditionChart.Series["Displacement"].YValueMembers = "Displacement";
+                //ResponseToInitialConditionChart.DataSource = outputTable;
+                //ResponseToInitialConditionChart.DataBind();
+                //ResponseToInitialConditionChart.Update();
+                //ResponseToInitialConditionChart.ChartAreas["Displacement"].AxisX.MajorGrid.Interval = 1;
+                //ResponseToInitialConditionChart.ChartAreas["Displacement"].AxisX.Minimum = 0;
+
+                DataTable InitialConditionTable = new DataTable("Response To Initial Condition vs Time");
+                InitialConditionTable.Columns.Add("Time", typeof(double));
+                InitialConditionTable.Columns.Add("Response To Initial Condition", typeof(double));
+
+                for (int i=0; i<InputData.TimeIntervals.Count;i++)
+                {
+                    InitialConditionTable.Rows.Add(InputData.TimeIntervals[i], InputData.ResponseToInitialConditions[i]);
+                }
+
+                ResponseToInitialConditionChart.Series["Response To Initial Condition"].XValueMember = "Time";
+                ResponseToInitialConditionChart.Series["Response To Initial Condition"].YValueMembers = "Response To Initial Condition";
+                ResponseToInitialConditionChart.DataSource = InitialConditionTable;
+                ResponseToInitialConditionChart.DataBind();
+                ResponseToInitialConditionChart.Update();
+                ResponseToInitialConditionChart.ChartAreas["ResponseToInitialConditionChartArea"].AxisX.MajorGrid.Interval = 1;
+                ResponseToInitialConditionChart.ChartAreas["ResponseToInitialConditionChartArea"].AxisX.IntervalOffset = 1;
+                ResponseToInitialConditionChart.ChartAreas["ResponseToInitialConditionChartArea"].AxisX.Minimum = 0.0;
+                ResponseToInitialConditionChart.ChartAreas["ResponseToInitialConditionChartArea"].AxisX.Title = "Time (s)";
+                ResponseToInitialConditionChart.ChartAreas["ResponseToInitialConditionChartArea"].AxisY.Title = "Displacement (m)";
+
+                DataTable HarmonicInputResponseTable = new DataTable("Response To Harmonic Input vs Time");
+                HarmonicInputResponseTable.Columns.Add("Time", typeof(double));
+                HarmonicInputResponseTable.Columns.Add("Response To Harmonic Input", typeof(double));
 
                 for (int i = 0; i < InputData.TimeIntervals.Count; i++)
                 {
-                    outputTable.Rows.Add(InputData.TimeIntervals[i], InputData.Displacement[i]);
+                    HarmonicInputResponseTable.Rows.Add(InputData.TimeIntervals[i], InputData.ResponseToHarmonicInput[i]);
                 }
 
-                DisplacementChart.Series["Displacement"].XValueMember = "Time";
-                DisplacementChart.Series["Displacement"].YValueMembers = "Displacement";
-                DisplacementChart.DataSource = outputTable;
-                DisplacementChart.DataBind();
-                DisplacementChart.Update();
-                DisplacementChart.ChartAreas["Displacement"].AxisX.MajorGrid.Interval = 1;
-                DisplacementChart.ChartAreas["Displacement"].AxisX.Minimum = 0;
+                ResponseToHarmonicExcitationChart.Series["Response To Harmonic Input"].XValueMember = "Time";
+                ResponseToHarmonicExcitationChart.Series["Response To Harmonic Input"].YValueMembers = "Response To Harmonic Input";
+                ResponseToHarmonicExcitationChart.DataSource = HarmonicInputResponseTable;
+                ResponseToHarmonicExcitationChart.DataBind();
+                ResponseToHarmonicExcitationChart.ChartAreas["ResponseToHarmonicInputChartArea"].AxisX.MajorGrid.Interval = 1;
+                ResponseToHarmonicExcitationChart.ChartAreas["ResponseToHarmonicInputChartArea"].AxisX.Minimum = 0;
+                ResponseToHarmonicExcitationChart.ChartAreas["ResponseToHarmonicInputChartArea"].AxisX.Title = "Time (s)";
+                ResponseToHarmonicExcitationChart.ChartAreas["ResponseToHarmonicInputChartArea"].AxisY.Title = "Displacement (m)";
+
+                DataTable TotalResponseTable = new DataTable("Total Response vs Time");
+                TotalResponseTable.Columns.Add("Time", typeof(double));
+                TotalResponseTable.Columns.Add("Total Response", typeof(double));
+
+                for(int i=0; i<InputData.TimeIntervals.Count;i++)
+                {
+                    TotalResponseTable.Rows.Add(InputData.TimeIntervals[i], InputData.TotalResponse[i]);
+                }
+
+                TotalResponseChart.Series["Total Response"].XValueMember = "Time";
+                TotalResponseChart.Series["Total Response"].YValueMembers = "Total Response";
+                TotalResponseChart.DataSource = TotalResponseTable;
+                TotalResponseChart.ChartAreas["TotalResponseChartArea"].AxisX.MajorGrid.Interval = 1;
+                TotalResponseChart.ChartAreas["TotalResponseChartArea"].AxisX.Minimum = 0;
+                TotalResponseChart.ChartAreas["TotalResponseChartArea"].AxisX.Title = "Time (s)";
+                TotalResponseChart.ChartAreas["TotalResponseChartArea"].AxisY.Title = "Displacement (m)";
+
+
             }
 
             
 
         }
+
+        
     }
 }

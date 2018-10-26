@@ -16,7 +16,7 @@ namespace Utilities
 
             List<double> Intervals = InputData.TimeIntervals;
             List<double> ForceOscillation = InputData.ForceOscillations;
-            List<double> Displacement = InputData.Displacement;
+            List<double> Displacement = InputData.ResponseToHarmonicInput;
 
             CSV.AppendLine("Time (s),InputForce (N), Displacement (mm) ");
 
