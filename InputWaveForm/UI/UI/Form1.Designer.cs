@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.InputParametersGroupBox = new System.Windows.Forms.GroupBox();
             this.ExcitationFrequencyRadUnitLabel = new System.Windows.Forms.Label();
             this.InitialVelocityUnitLabel = new System.Windows.Forms.Label();
@@ -82,6 +82,8 @@
             this.InputForceTab = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.BodyDisplacementTab = new System.Windows.Forms.TabPage();
+            this.ResponseToHarmonicExcitationChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.TotalResponseChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ResponseToInitialConditionChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.NaturalFrequencyHzTextBox = new System.Windows.Forms.TextBox();
             this.SCNaturalFrequencyHz = new System.Windows.Forms.Label();
@@ -102,17 +104,15 @@
             this.NaturalFrequencyRadTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.PlotButton = new System.Windows.Forms.Button();
-            this.TotalResponseChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ResponseToHarmonicExcitationChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.InputParametersGroupBox.SuspendLayout();
             this.PlotTabs.SuspendLayout();
             this.InputForceTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.BodyDisplacementTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ResponseToHarmonicExcitationChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalResponseChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ResponseToInitialConditionChart)).BeginInit();
             this.SystemCharacterisitcsLabel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TotalResponseChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ResponseToHarmonicExcitationChart)).BeginInit();
             this.SuspendLayout();
             // 
             // InputParametersGroupBox
@@ -502,25 +502,25 @@
             // 
             // chart1
             // 
-            chartArea5.Name = "Input";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea1.Name = "Input";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(6, 6);
             this.chart1.Name = "chart1";
-            series5.ChartArea = "Input";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.CustomProperties = "IsXAxisQuantitative=True";
-            series5.Legend = "Legend1";
-            series5.Name = "Input Force";
-            this.chart1.Series.Add(series5);
+            series1.ChartArea = "Input";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.CustomProperties = "IsXAxisQuantitative=True";
+            series1.Legend = "Legend1";
+            series1.Name = "Input Force";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(952, 722);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title5.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title5.Name = "InputForceTitle";
-            title5.Text = "Input Force";
-            this.chart1.Titles.Add(title5);
+            title1.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "InputForceTitle";
+            title1.Text = "Input Force";
+            this.chart1.Titles.Add(title1);
             // 
             // BodyDisplacementTab
             // 
@@ -535,26 +535,68 @@
             this.BodyDisplacementTab.Text = "Body Displacement";
             this.BodyDisplacementTab.UseVisualStyleBackColor = true;
             // 
+            // ResponseToHarmonicExcitationChart
+            // 
+            chartArea2.Name = "ResponseToHarmonicInputChartArea";
+            this.ResponseToHarmonicExcitationChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ResponseToHarmonicExcitationChart.Legends.Add(legend2);
+            this.ResponseToHarmonicExcitationChart.Location = new System.Drawing.Point(3, 246);
+            this.ResponseToHarmonicExcitationChart.Name = "ResponseToHarmonicExcitationChart";
+            series2.ChartArea = "ResponseToHarmonicInputChartArea";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Response To Harmonic Input";
+            this.ResponseToHarmonicExcitationChart.Series.Add(series2);
+            this.ResponseToHarmonicExcitationChart.Size = new System.Drawing.Size(942, 234);
+            this.ResponseToHarmonicExcitationChart.TabIndex = 0;
+            this.ResponseToHarmonicExcitationChart.Text = "ResponseToHarmonicInput";
+            title2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "ResponseToHarmonicInputTitle";
+            title2.Text = "Response To Harmonic Input";
+            this.ResponseToHarmonicExcitationChart.Titles.Add(title2);
+            // 
+            // TotalResponseChart
+            // 
+            chartArea3.Name = "TotalResponseChartArea";
+            this.TotalResponseChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.TotalResponseChart.Legends.Add(legend3);
+            this.TotalResponseChart.Location = new System.Drawing.Point(6, 486);
+            this.TotalResponseChart.Name = "TotalResponseChart";
+            series3.ChartArea = "TotalResponseChartArea";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "Total Response";
+            this.TotalResponseChart.Series.Add(series3);
+            this.TotalResponseChart.Size = new System.Drawing.Size(864, 234);
+            this.TotalResponseChart.TabIndex = 0;
+            this.TotalResponseChart.Text = "TotalResponse";
+            title3.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "TotalResponseTitle";
+            title3.Text = "Total Response";
+            this.TotalResponseChart.Titles.Add(title3);
+            // 
             // ResponseToInitialConditionChart
             // 
-            chartArea6.Name = "ResponseToInitialConditionChartArea";
-            this.ResponseToInitialConditionChart.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.ResponseToInitialConditionChart.Legends.Add(legend6);
+            chartArea4.Name = "ResponseToInitialConditionChartArea";
+            this.ResponseToInitialConditionChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.ResponseToInitialConditionChart.Legends.Add(legend4);
             this.ResponseToInitialConditionChart.Location = new System.Drawing.Point(6, 6);
             this.ResponseToInitialConditionChart.Name = "ResponseToInitialConditionChart";
-            series6.ChartArea = "ResponseToInitialConditionChartArea";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "Response To Initial Condition";
-            this.ResponseToInitialConditionChart.Series.Add(series6);
+            series4.ChartArea = "ResponseToInitialConditionChartArea";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Legend = "Legend1";
+            series4.Name = "Response To Initial Condition";
+            this.ResponseToInitialConditionChart.Series.Add(series4);
             this.ResponseToInitialConditionChart.Size = new System.Drawing.Size(942, 234);
             this.ResponseToInitialConditionChart.TabIndex = 0;
             this.ResponseToInitialConditionChart.Text = "Response To Initial Condition";
-            title6.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title6.Name = "ResponseToInitialConditionTitle";
-            title6.Text = "Response To Initial Condition";
-            this.ResponseToInitialConditionChart.Titles.Add(title6);
+            title4.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "ResponseToInitialConditionTitle";
+            title4.Text = "Response To Initial Condition";
+            this.ResponseToInitialConditionChart.Titles.Add(title4);
             // 
             // NaturalFrequencyHzTextBox
             // 
@@ -760,48 +802,6 @@
             this.PlotButton.UseVisualStyleBackColor = true;
             this.PlotButton.Click += new System.EventHandler(this.PlotButton_Click);
             // 
-            // TotalResponseChart
-            // 
-            chartArea7.Name = "TotalResponseChartArea";
-            this.TotalResponseChart.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.TotalResponseChart.Legends.Add(legend7);
-            this.TotalResponseChart.Location = new System.Drawing.Point(6, 486);
-            this.TotalResponseChart.Name = "TotalResponseChart";
-            series7.ChartArea = "TotalResponseChartArea";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.Legend = "Legend1";
-            series7.Name = "Total Response";
-            this.TotalResponseChart.Series.Add(series7);
-            this.TotalResponseChart.Size = new System.Drawing.Size(864, 234);
-            this.TotalResponseChart.TabIndex = 0;
-            this.TotalResponseChart.Text = "TotalResponse";
-            title7.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title7.Name = "TotalResponseTitle";
-            title7.Text = "Total Response";
-            this.TotalResponseChart.Titles.Add(title7);
-            // 
-            // ResponseToHarmonicExcitationChart
-            // 
-            chartArea8.Name = "ResponseToHarmonicInputChartArea";
-            this.ResponseToHarmonicExcitationChart.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.ResponseToHarmonicExcitationChart.Legends.Add(legend8);
-            this.ResponseToHarmonicExcitationChart.Location = new System.Drawing.Point(3, 246);
-            this.ResponseToHarmonicExcitationChart.Name = "ResponseToHarmonicExcitationChart";
-            series8.ChartArea = "ResponseToHarmonicInputChartArea";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Legend = "Legend1";
-            series8.Name = "Response To Harmonic Input";
-            this.ResponseToHarmonicExcitationChart.Series.Add(series8);
-            this.ResponseToHarmonicExcitationChart.Size = new System.Drawing.Size(942, 234);
-            this.ResponseToHarmonicExcitationChart.TabIndex = 0;
-            this.ResponseToHarmonicExcitationChart.Text = "ResponseToHarmonicInput";
-            title8.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title8.Name = "ResponseToHarmonicInputTitle";
-            title8.Text = "Response To Harmonic Input";
-            this.ResponseToHarmonicExcitationChart.Titles.Add(title8);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -813,18 +813,18 @@
             this.Controls.Add(this.PlotTabs);
             this.Controls.Add(this.InputParametersGroupBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "1 DoF Response";
             this.InputParametersGroupBox.ResumeLayout(false);
             this.InputParametersGroupBox.PerformLayout();
             this.PlotTabs.ResumeLayout(false);
             this.InputForceTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.BodyDisplacementTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ResponseToHarmonicExcitationChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalResponseChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ResponseToInitialConditionChart)).EndInit();
             this.SystemCharacterisitcsLabel.ResumeLayout(false);
             this.SystemCharacterisitcsLabel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TotalResponseChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ResponseToHarmonicExcitationChart)).EndInit();
             this.ResumeLayout(false);
 
         }
